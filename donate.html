@@ -1,0 +1,318 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>하람: 후원 및 펀딩</title>
+        <link rel="shortcut icon" sizes="90x90" type="image/x-icon" href="media/logo2.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      $( document ).ready( function() {
+        var jbOffset = $( '.jbMenu' ).offset();
+        $( window ).scroll( function() {
+          if ( $( document ).scrollTop() > jbOffset.top ) {
+            $( '.jbMenu' ).addClass( 'jbFixed' );
+          }
+          else {
+            $( '.jbMenu' ).removeClass( 'jbFixed' );
+          }
+          if(rollIt){ 
+            $(".scroll").fadeIn(90).css({"position":"fixed"});
+        }
+        else{
+            $(".scroll").fadeOut(90);
+        }
+        });
+      } );
+    </script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Serif+KR:wght@600&display=swap');
+
+        header{background-color: rgb(255,234,221);}
+
+        body{margin: 0px; background-color: rgb(255,234,221);}
+
+        .h_btn{
+            background-color: rgb(255,234,221);
+            border-style: solid;
+            font-size: medium;
+            font-family: 'Noto Serif KR', serif;
+            color: rgb(85, 85, 85);
+            cursor: pointer;
+            border-radius: 17px;
+            border-color: rgb(255,234,221);
+            padding: 5px;
+        }
+        .h_btn:hover{
+            background-color: rgb(250, 222, 204);
+        }
+
+        #착한소비{
+            margin-left: 580px;
+        }
+
+        #로그인{
+            margin-left: 60px;
+        }
+
+        .jbFixed {
+            position: fixed;
+            top: 0px;
+            }
+        .jbMenu { 
+            width: 100%; background-color:rgb(255,234,221); z-index:100;
+        }
+
+        #donatemp4{
+            padding: 0px 125px 150px 125px;
+        }
+        .donate_explain{
+            font-family: 'Noto Serif KR', serif;
+            font-size: 50px;
+            color: rgb(85, 85, 85);
+            text-align: center;
+        }
+        
+        .q{
+            color: rgb(58, 58, 58);
+			      font-size: 30px;
+	    	}
+
+        .select{
+            font-size: 30px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(255,234,221);
+            color:rgb(252, 192, 156);
+            border-bottom: 3px solid rgb(252, 192, 156);
+        }
+
+      .option{
+            background:rgb(255,234,221);
+            color: black;
+            font-size: 20px;
+            height: 50px;
+        }
+
+      #완료btn{
+        background-color:rgb(250, 225, 209);
+        border-style: solid;
+        border: 0;
+        padding: 10px 50px 10px 50px;      
+        border-radius: 20px;
+        font-family: 'Noto Serif KR', serif;
+        font-size: 20px;
+        margin-top: 30px;
+          }
+      #완료btn:hover{
+        background-color: rgb(248, 216, 196);
+        cursor: pointer;
+          }
+
+      #펀딩{
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-family: 'Noto Serif KR', serif;
+        font-size: 50px;
+        color: rgb(85, 85, 85);
+        text-align: center;
+          }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+        }
+      .swiper-slide {
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        } 
+      .swiper-slide img {
+          display: block;
+          width: 60%;
+          object-fit: cover;
+          border-radius: 60px;
+        }
+
+      #comment{
+          font-family: 'Noto Serif KR', serif;
+          font-size: 10px;
+          color: rgb(85, 85, 85);
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+      footer{background-color: rgb(250, 225, 209); text-align: left;}
+
+      .menu__up td{
+          vertical-align: top;
+          width: 400px;
+        }
+      .menu__up ul li{
+          margin-top: 15px;
+          font-size: 14px;
+          font-weight: 10;   
+          list-style: none;
+          cursor: pointer;
+        }
+      .menu__up h4{
+          color: #222222;
+          font-size: 13px;
+        }
+    
+      .menu__up {margin-left: 70px;}
+      .menu__up ul {padding: 0; margin-right: 30px;}
+
+      .menu__down{
+          margin-left: 70px; margin-right: 70px; border-top: 1px solid lightgray; 
+          padding-top: 15px; padding-bottom: 15px; cursor: pointer;
+        }
+      .menu__down2{font-size: 14px; font-weight: 500;}
+
+      #하단메뉴하이퍼{color: black; text-decoration: none;}
+      #하단메뉴하이퍼:hover{text-decoration: underline;}
+
+    </style>
+    </head>
+    <body>
+        <header>
+        <div class="jbMenu">
+        <div class="animate__animated animate__bounceInDown animate">
+        <table>
+        <td><a href="main.html"><img src="media/logo6.png" width="120px"></a></td>
+        <td><a href="spend.html"><button class="h_btn" id="착한소비">착한소비</button></a></td>
+        <td><a href="donate.html"><button class="h_btn">후원/펀딩</button></a></td>
+        <td><button class="h_btn">봉사</button></td>
+        <td><button class="h_btn">공지사항</button></td>
+        <td><button class="h_btn">커뮤니티</button></td>
+        <td><button class="h_btn" id="로그인"><img src="media/free-icon-user-1077063.png" width="20px"></button></td>
+        <td><button class="h_btn"><img src="media/free-icon-search-interface-symbol-54481.png" width="20px"></button></td>
+        </table>
+    </div>
+</div>
+        </header>
+        <video id="donatemp4" src="media/기부독려영상.mp4" width="80%" autoplay muted loop controls></video>
+        <div class="donate_explain">당신에게 꼭 맞는 후원처 알아보기</div>
+        <div class="mid_bottom" style="text-align: center; margin-top: 50px;">
+
+			<div class="q"><b>어느 분야의 후원을 원하나요?</b></div>
+
+			<div class="selectbox">
+		    <form>
+		      <select class="select" >
+		        <option value="1" class="option" selected>장애인 복지</option>
+		        <option value="2" class="option">노인 복지</option>
+		        <option value="3" class="option">아동 복지</option>
+                <option value="4" class="option">지역사회 복지</option>
+                <option value="5" class="option">해외 기부</option>
+		      </select>
+		    </form>
+		  </div><br>
+
+			<div class="q"><b>예상 후원 기간이 얼마인가요?</b></div>
+
+			<div class="selectbox">
+		    <form>
+		      <select class="select" >
+		        <option value="1" class="option">1개월~3개월</option>
+		        <option value="2" class="option">4개월~6개월</option>
+		        <option value="3" class="option">6개월 이상</option>
+		        <option value="4" class="option" selected>1년 이상</option>
+		      </select>
+		    </form>
+		  </div><br>
+
+		  <div class="q"><b>개인인가요 기업인가요?</b></div>
+
+			<div class="selectbox">
+		    <form>
+		      <select class="select" >
+		        <option value="1" class="option" selected>개인</option>
+		        <option value="2" class="option">기업</option>
+		      </select>
+		    </form>
+		  </div>
+          <button id="완료btn">완 료</button>
+
+          <div id=펀딩>이번주 주목할만한 펀딩 상품</div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="media/선택1.png"></div>
+              <div class="swiper-slide"><img src="media/선택2.png"></div>
+              <div class="swiper-slide"><img src="media/선택3.png"></div>
+            </div>
+          </div>
+
+          <div id="comment">* 수익금은 코로나 19 취약계층에게 전달됩니다.</div>
+          
+    <footer>
+      <div class="footer__area">
+         <table class="menu__up">
+            <td>
+               <h4>소개</h4>
+               <ul>
+                  <li><a id="하단메뉴하이퍼">하람 이용 방법</a></li>
+                  <li><a id="하단메뉴하이퍼">하람 현황</a></li>
+                  <li><a id="하단메뉴하이퍼">후원자 정보</a></li>
+                  <li><a id="하단메뉴하이퍼"> 후원 및 펀딩 현황</a></li>
+                  <li><a id="하단메뉴하이퍼">채용 정보</a></li>
+               </ul>
+            </td>
+            
+            
+            <td>
+               <h4>커뮤니티</h4>
+               <ul>
+                  <li><a id="하단메뉴하이퍼">봉사 후기</a></li>
+                  <li><a id="하단메뉴하이퍼">봉사 함께해요!</a></li>
+                  <li><a id="하단메뉴하이퍼">사회적 기업 광고</a></li>
+                  <li><a id="하단메뉴하이퍼">착한 소비 후기</a></li>
+               </ul>
+            </td>
+
+            <td>
+               <h4>공지사항</h4>
+               <ul>
+                  <li><a id="하단메뉴하이퍼">Q&A</a></li>
+                  <li><a id="하단메뉴하이퍼">기부 증서 발급</a></li>
+                  <li><a id="하단메뉴하이퍼">자료 센터</a></li>
+                  <li><a id="하단메뉴하이퍼">자주하는 질문</a></li>
+               </ul>
+            </td>
+
+            <td>
+               <h4>입금 계좌 정보</h4>
+               <ul>
+                  <li><a>신한: 110-489-271931</a></li>
+                  <li><a>우리: 1002-162-158446</a></li>
+                  <li><a>농협: 302-0030-519172</a></li>
+                  <li><a>예금주: (주) 하람</a></li>
+               </ul>
+            </td>
+         </table>
+      </div>      
+      <section class="menu__down">
+         <table class="menu__down2"><td>&copy; 2021 Haram, Inc. <span>·</span> <a id="하단메뉴하이퍼">개인정보 처리방침</a> &nbsp;<span>·</span>
+          <a id="하단메뉴하이퍼"> 이용약관</a>&nbsp;<span>·</span><a id="하단메뉴하이퍼"> 사이트맵</a>&nbsp;<span>·</span>
+          <a id="하단메뉴하이퍼"> 회사 세부정보</a></table>
+      </section>
+</footer>
+</body>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+autoplay: {delay:2300,disableOnInteraction: false}});
+</script>
+</html>
