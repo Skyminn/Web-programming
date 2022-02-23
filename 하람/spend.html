@@ -1,0 +1,405 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>하람: 착한소비</title>
+        <link rel="shortcut icon" sizes="90x90" type="image/x-icon" href="media/logo2.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $( document ).ready( function() {
+              var jbOffset = $( '.jbMenu' ).offset();
+              $( window ).scroll( function() {
+                if ( $( document ).scrollTop() > jbOffset.top ) {
+                  $( '.jbMenu' ).addClass( 'jbFixed' );
+                }
+                else {
+                  $( '.jbMenu' ).removeClass( 'jbFixed' );
+                }
+                if(rollIt){ 
+                  $(".scroll").fadeIn(90).css({"position":"fixed"});
+              }
+              else{
+                  $(".scroll").fadeOut(90);
+              }
+              });
+            } );
+
+            $(".hover").mouseleave(function () {$(this).removeClass("hover");});
+          </script>
+          <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Serif+KR:wght@600&display=swap');
+    
+            header{background-color: rgb(255,234,221);}
+    
+            body{margin: 0px; background-color: rgb(255,234,221);}
+    
+            .h_btn{
+                background-color: rgb(255,234,221);
+                border-style: solid;
+                font-size: medium;
+                font-family: 'Noto Serif KR', serif;
+                color: rgb(85, 85, 85);
+                cursor: pointer;
+                border-radius: 17px;
+                border-color: rgb(255,234,221);
+                padding: 5px;
+            }
+            .h_btn:hover{
+                background-color: rgb(250, 222, 204);
+            }
+    
+            #착한소비{
+                margin-left: 580px;
+            }
+    
+            #로그인{
+                margin-left: 60px;
+            }
+    
+            .jbFixed {
+                position: fixed;
+                top: 0px;
+                }
+            .jbMenu { 
+                width: 100%; background-color:rgb(255,234,221); z-index:100;
+            }  
+
+            #착한소비란{
+                margin-top: 20px;
+                margin-left: 150px;
+                font-family: 'Noto Serif KR', serif;
+                font-size: 40px;
+                color: rgb(85, 85, 85);
+            }
+            #착한소비_comment{
+                margin-top: 10px;
+                margin-left: 150px;
+                font-family: 'Noto Serif KR', serif;
+                font-size: 20px;
+                color: rgb(85, 85, 85);
+            }
+
+            .effect_img {
+
+                position: relative;
+                margin: 10px;
+                min-width: 310px -60px;
+                max-width: 310px;
+                width: 100%;
+                color: #ffffff;
+                text-align: left;
+                background-color: #000000;
+                font-size: 16px;
+            }
+            .effect_img * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+            }
+            .effect_img img {
+            position: relative;
+            max-width: 100%;
+            vertical-align: top;
+            }
+            .effect_img figcaption {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            padding: 20px 30px;
+            }
+            .effect_img figcaption:before,
+            .effect_img figcaption:after {
+            width: 1px;
+            height: 0;
+            } 
+            .effect_img figcaption:before {
+            right: 0;
+            top: 0;
+            }
+            .effect_img figcaption:after {
+            left: 0;
+            bottom: 0;
+            }
+            .effect_img h3,
+            .effect_img p {
+            line-height: 1.5em;
+            }
+            .effect_img h3 {
+            margin: 0 0 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            }
+            .effect_img p {
+            font-size: 0.8em;
+            font-weight: 500;
+            margin: 0 0 15px;
+            }
+            .effect_img a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            }
+            .effect_img:before,
+            .effect_img:after,
+            .effect_img figcaption:before,
+            .effect_img figcaption:after {
+            position: absolute;
+            content: '';
+            background-color: #ffffff;
+            z-index: 1;
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+            opacity: 0.8;
+            }
+            .effect_img:before,
+            .effect_img:after {
+            height: 1px;
+            width: 0%;
+            }
+            .effect_img:before {
+            top: 0;
+            left: 0;
+            }
+            .effect_img:after {
+            bottom: 0;
+            right: 0;
+            }
+            .effect_img:hover img,
+            .effect_img.hover img {
+            opacity: 0.4;
+            }
+            .effect_img:hover figcaption,
+            .effect_img.hover figcaption {
+            opacity: 1;
+            }
+            .effect_img:hover figcaption:before,
+            .effect_img.hover figcaption:before,
+            .effect_img:hover figcaption:after,
+            .effect_img.hover figcaption:after {
+            height: 100%;
+            }
+            .effect_img:hover:before,
+            .effect_img.hover:before,
+            .effect_img:hover:after,
+            .effect_img.hover:after {
+            width: 100%;
+            }
+            .effect_img:hover:before,
+            .effect_img.hover:before,
+            .effect_img:hover:after,
+            .effect_img.hover:after,
+            .effect_img:hover figcaption:before,
+            .effect_img.hover figcaption:before,
+            .effect_img:hover figcaption:after,
+            .effect_img.hover figcaption:after {
+            opacity: 0.1;
+            }
+            #effect_table{
+                margin-top: 10px;
+                margin-left: 130px;
+                margin-bottom: 30px;
+            }
+
+            footer{background-color: rgb(250, 225, 209); text-align: left;}
+
+            .menu__up td{
+                vertical-align: top;
+                width: 400px;
+            }
+            .menu__up ul li{
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 10;   
+                list-style: none;
+                cursor: pointer;
+            }
+            .menu__up h4{
+                color: #222222;
+                font-size: 13px;
+            }
+
+            .menu__up {margin-left: 70px;}
+            .menu__up ul {padding: 0; margin-right: 30px;}
+
+            .menu__down{
+                margin-left: 70px; margin-right: 70px; border-top: 1px solid lightgray; 
+                padding-top: 15px; padding-bottom: 15px; cursor: pointer;
+            }
+            .menu__down2{font-size: 14px; font-weight: 500;}
+
+            #하단메뉴하이퍼{color: black; text-decoration: none;}
+            #하단메뉴하이퍼:hover{text-decoration: underline;}
+
+            </style>
+    </head>
+    <body>
+        <header>
+            <div class="jbMenu">
+            <div class="animate__animated animate__bounceInDown animate">
+            <table>
+            <td><a href="main.html"><img src="media/logo6.png" width="120px"></a></td>
+            <td><a href="spend.html"><button class="h_btn" id="착한소비">착한소비</button></a></td>
+            <td><a href="donate.html"><button class="h_btn">후원/펀딩</button></a></td>
+            <td><button class="h_btn">봉사</button></td>
+            <td><button class="h_btn">공지사항</button></td>
+            <td><button class="h_btn">커뮤니티</button></td>
+            <td><button class="h_btn" id="로그인"><img src="media/free-icon-user-1077063.png" width="20px"></button></td>
+            <td><button class="h_btn"><img src="media/free-icon-search-interface-symbol-54481.png" width="20px"></button></td>
+            </table>
+        </div>
+    </div>
+        </header>
+        <div class="animate__animated animate__fadeInLeft animate animate__delay-1s">
+        <div class="mid_box">
+        <div id="착한소비란">착한소비란?</div>
+        <div id="착한소비_comment">환경과 사회에 미치는 영향까지 충분히 고려해 상품이나 서비스를 구매하는 현상</div>
+
+        <table id="effect_table">
+        <td>
+        <figure class="effect_img">
+            <img src="media/wecancookie.png"/>
+            <figcaption>
+              <h3>위캔</h3>
+              <p>지적장애인들도 직업을 갖고 당당하게 사회의 일원으로 살아갈 수 있다는 믿음을 실천하는
+                  직업재활시설이자 장애인들에게 일자리를 제공하기 위해 쿠키를 만드는 사회적 기업이다.
+              </p>
+            </figcaption>
+            <a href="https://www.wecanshop.co.kr/"></a>
+          </figure>
+        </td>
+
+         <td>
+          <figure class="effect_img">
+            <img src="media/동구밭2.png"/>
+            <figcaption>
+              <h3>동구밭 팩토리</h3>
+              <p>발달장애인에게 일자리를 제공함으로써
+                  발달장애인의 자립과 환경, 고객의 지속가능함을 생각하는 브랜드로 독자적인 기술력과 레시피를
+                  기반으로 뛰어난 기능의 고체화장품(비누,입욕제,세제 등)을 선보인다.
+              </p>
+            </figcaption>
+            <a href="https://donggubat.com/"></a>
+          </figure>
+        </td>
+
+        <td>
+            <figure class="effect_img">
+              <img src="media/마르코로호.png"/>
+              <figcaption>
+                <h3>마르코로호</h3>
+                <p>국내 할머니들이 제작한 소품을 판매하는 브랜드로
+                    여성노인분들의 어려움과 사회적, 경제적 문제를 해결하자는 취지로 설립되었다. 
+                    할머니들의 취향과 감성을 담은 '예쁜 촌스러움' 이라는 생활 수공예 제품들을 판매한다.</p>
+              </figcaption>
+              <a href="https://marcoroho.com/"></a>
+            </figure>
+        </td>
+        
+          <tr> 
+        <td>
+            <figure class="effect_img">
+              <img src="media/믹순생활.jpg"/>
+              <figcaption>
+                <h3>믹순생활</h3>
+                <p>불필요한 성분은 빼고 피부에 꼭 필요한 핵심 성분만을 담은 미니멀 뷰티 브랜드로
+                    '평범한 마법봉'의 발달장애 작가들과 협업을 진행하였다.
+                    ‘Love Yourself 스마일’ 로고가 그려진 
+                    믹순 생활의 모든 제품을 판매할 때마다 수익금 일부가 발달장애 예술가들에게 기부된다.
+                </p>
+              </figcaption>
+              <a href="https://mixsoon.co.kr/"></a>
+            </figure>
+        </td>
+
+        <td>
+            <figure class="effect_img">
+              <img src="media/라비다.jpg"/>
+              <figcaption>
+                <h3>라비다</h3>
+                <p>2013년부터 선행을 지속하고 있는 브랜드로 전염병으로 희생되는 지구촌 어린이를 구하기 위해 라비다
+                     파워셀 에센스 에스 1병을 판매할 때마다 수익금 중 일부를 국제백신연구소 후원비로 전달한다.
+                     또한 에센스 1병을 구입하면 지구촌 어린이 1명을 구(9)한다는 의미의 119 캠페인을 꾸준히 전개하고 있다. </p>
+              </figcaption>
+              <a href="http://www.thelavida.com/"></a>
+            </figure>
+        </td>
+
+        <td>
+            <figure class="effect_img">
+              <img src="media/farmacy.jpg"/>
+              <figcaption>
+                <h3>파머시</h3>
+                <p>파머시는 체리라인의 원료를 공급받는 아세롤라 체리 농장 지역 농부들의 기부 활동에 동참 중이다. 
+                    국내에서는 한정판인 스윗 애플 클린을 구매하면 한 개당 1천원씩 후원금이 모이고, 초록우산 어린이재단에 전달된다.</p>
+              </figcaption>
+              <a href="https://www.farmacybeauty.com/"></a>
+            </figure>
+        </td>
+        </tr>
+        </table>
+        </div>
+        </div>
+
+        <footer>
+            <div class="footer__area">
+               <table class="menu__up">
+                  <td>
+                     <h4>소개</h4>
+                     <ul>
+                        <li><a id="하단메뉴하이퍼">하람 이용 방법</a></li>
+                        <li><a id="하단메뉴하이퍼">하람 현황</a></li>
+                        <li><a id="하단메뉴하이퍼">후원자 정보</a></li>
+                        <li><a id="하단메뉴하이퍼"> 후원 및 펀딩 현황</a></li>
+                        <li><a id="하단메뉴하이퍼">채용 정보</a></li>
+                     </ul>
+                  </td>
+                  
+                  
+                  <td>
+                     <h4>커뮤니티</h4>
+                     <ul>
+                        <li><a id="하단메뉴하이퍼">봉사 후기</a></li>
+                        <li><a id="하단메뉴하이퍼">봉사 함께해요!</a></li>
+                        <li><a id="하단메뉴하이퍼">사회적 기업 광고</a></li>
+                        <li><a id="하단메뉴하이퍼">착한 소비 후기</a></li>
+                     </ul>
+                  </td>
+      
+                  <td>
+                     <h4>공지사항</h4>
+                     <ul>
+                        <li><a id="하단메뉴하이퍼">Q&A</a></li>
+                        <li><a id="하단메뉴하이퍼">기부 증서 발급</a></li>
+                        <li><a id="하단메뉴하이퍼">자료 센터</a></li>
+                        <li><a id="하단메뉴하이퍼">자주하는 질문</a></li>
+                     </ul>
+                  </td>
+      
+                  <td>
+                     <h4>입금 계좌 정보</h4>
+                     <ul>
+                        <li><a>신한: 110-489-271931</a></li>
+                        <li><a>우리: 1002-162-158446</a></li>
+                        <li><a>농협: 302-0030-519172</a></li>
+                        <li><a>예금주: (주) 하람</a></li>
+                     </ul>
+                  </td>
+               </table>
+            </div>      
+            <section class="menu__down">
+               <table class="menu__down2"><td>&copy; 2021 Haram, Inc. <span>·</span> <a id="하단메뉴하이퍼">개인정보 처리방침</a> &nbsp;<span>·</span>
+                <a id="하단메뉴하이퍼"> 이용약관</a>&nbsp;<span>·</span><a id="하단메뉴하이퍼"> 사이트맵</a>&nbsp;<span>·</span>
+                <a id="하단메뉴하이퍼"> 회사 세부정보</a></table>
+            </section>
+      </footer>
+    </body>
+</html>
